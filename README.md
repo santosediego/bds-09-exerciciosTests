@@ -1,46 +1,45 @@
-# Getting Started with Create React App
+# Exercício de fixação sobre Tests
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Sobre o exercício
 
-## Available Scripts
+Projeto: https://github.com/devsuperior/bds09
 
-In the project directory, you can run:
+No projeto acima, a função countClientsMatching(partialName: string), retorna quantos dos clientes possuem em seu nome o partialName, informado como argumento. Para isto, esta função faz a chamada de uma outra função requestClients(), responsável por obter os clientes cadastrados no sistema. Você deve escrever os testes para os dois cenários abaixo da função countClientsMatching, mockando a função requestClients para especificar cada um dos cenários no próprio teste.
 
-### `yarn start`
+```
+"should return 0 when 0 out of 2 clients match"
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+"should return 2 when 2 out of 4 clients match"
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Tecnologias utilizadas
 
-### `yarn test`
+- JEST e Testing Library
+  - Testes de funções JS/TS
+  - Execução de testes, modo watch
+  - Bloco describe e suíte de testes
+  - Mock de funções com spyOn
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Como executar os testes
 
-### `yarn build`
+Pré-requisitos: npm / yarn
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+# clonar repositório
+git clone https://github.com/santosediego/bds-09-exerciciosTests.git
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# entrar na pasta do projeto front end web
+cd bds-09-exerciciosTests
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# instalar dependências
+yarn install
 
-### `yarn eject`
+# executar o test
+yarn test:whatch
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Aluno
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Diego Santos
